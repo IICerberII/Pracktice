@@ -1,0 +1,113 @@
+﻿<Window x:Class="WpfApp2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+        WindowState="Maximized"
+        Title="Регистрация" Height="700" Width="1100">
+    <Grid ShowGridLines="False">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" TextWrapping="Wrap" TextAlignment="Center" FontSize="30" >
+            <Run Foreground="Red">Регистрация</Run>
+            сотрудников
+            <LineBreak/>
+            Компании
+        </TextBlock>
+        <ListBox Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" BorderThickness="0">
+            <TextBlock FontSize="24">Отзывы на тех поддержку</TextBlock>
+            <ListBoxItem>
+                <StackPanel>
+                    <TextBlock FontSize="22">Дёмин Александр Ильич</TextBlock>
+                    <TextBlock FontSize="14">До него смогли дозвониться</TextBlock>
+                </StackPanel>
+            </ListBoxItem>
+            <ListBoxItem>
+                <StackPanel>
+                    <TextBlock FontSize="22">Павлов Анатолий Кринделёвич</TextBlock>
+                    <TextBlock FontSize="14">Смог дозвониться до техподдержки за 7 минут</TextBlock>
+                </StackPanel>
+            </ListBoxItem>
+            <ListBoxItem>
+                <StackPanel>
+                    <TextBlock FontSize="22">Харитонов Эмиль Ереванович</TextBlock>
+                    <TextBlock FontSize="14">Не дозвонился, но решил всё сам</TextBlock>
+                </StackPanel>
+            </ListBoxItem>
+        </ListBox>
+        <ListBox Grid.Row="1" Grid.Column="3" MaxWidth="400" BorderThickness="0">
+            <TextBlock FontSize="24">Техническая поддержка</TextBlock>
+            <ListBoxItem>
+                <StackPanel>
+                    <TextBlock FontSize="22">Дёмин Александр Ильич</TextBlock>
+                    <TextBlock FontSize="14">+7(902)865-98-66</TextBlock>
+                </StackPanel>
+            </ListBoxItem>
+            <ListBoxItem>
+                <StackPanel>
+                    <TextBlock FontSize="22">Жар Агон Адович</TextBlock>
+                    <TextBlock FontSize="14">+7(96)785-87-21</TextBlock>
+                </StackPanel>
+            </ListBoxItem>
+            <ListBoxItem>
+                <StackPanel>
+                    <TextBlock FontSize="22">Запальнов Норман Никитович</TextBlock>
+                    <TextBlock FontSize="14">+7(960)464-78-30</TextBlock>
+                </StackPanel>
+            </ListBoxItem>
+        </ListBox>
+        <Button Grid.Column="1" Grid.Row="4" MaxHeight="90" Margin="10" FontSize="24" Background="#FF5AA56C" MaxWidth="200">Зарегестрировать</Button>
+        <Button Grid.Column="2" Grid.Row="4"  MaxHeight="90" Margin="10" FontSize="24" Background="#FFC85B5B" MaxWidth="200">Отменить</Button>
+
+        <StackPanel Grid.Row="1" Grid.Column="1" Grid.RowSpan="2" Grid.ColumnSpan="2">
+            <TextBlock FontSize="24">Логин</TextBlock>
+            <TextBox FontSize="22">login</TextBox>
+            <TextBlock FontSize="24">Пароль:</TextBlock>
+            <PasswordBox  FontSize="22"></PasswordBox>
+            <TextBlock FontSize="24">Повторите пароль:</TextBlock>
+            <PasswordBox PasswordChar="#" FontSize="22"></PasswordBox>
+            <TextBlock FontSize="24">Должность:</TextBlock>
+            <ComboBox>
+                <ComboBoxItem IsSelected="True">
+                    <StackPanel>
+                        <TextBlock FontSize="24">Администратор</TextBlock>
+                    </StackPanel>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <StackPanel>
+                        <TextBlock FontSize="24">Уборщик</TextBlock>
+                    </StackPanel>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <StackPanel>
+                        <TextBlock FontSize="24">Сантехник</TextBlock>
+                    </StackPanel>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <StackPanel>
+                        <TextBlock FontSize="24">Водитель</TextBlock>
+                    </StackPanel>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <StackPanel>
+                        <TextBlock FontSize="24">Менеджер</TextBlock>
+                    </StackPanel>
+                </ComboBoxItem>
+            </ComboBox>
+            <TextBlock FontSize="24">Комментарий:</TextBlock>
+            <TextBox MaxHeight="110" VerticalScrollBarVisibility="Visible" TextWrapping="WrapWithOverflow" MaxLines="3" FontSize="24">Комментарий про сотрудника. Это очень информативный комментарий про сотридника. Это очень информативный комментарий про сотридника. Это очень информативный комментарий про сотридника. Это очень информативный комментарий про сотридника. Это очень информативный комментарий про сотридника. Это очень информативный комментарий про сотридника.</TextBox>
+        </StackPanel>
+    </Grid>
+</Window>
